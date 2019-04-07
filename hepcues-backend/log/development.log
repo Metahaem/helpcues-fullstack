@@ -1,0 +1,482 @@
+Started GET "/api/v1/users" for 127.0.0.1 at 2019-04-05 13:07:52 +0100
+Started GET "/api/v1/acts" for 127.0.0.1 at 2019-04-05 13:07:52 +0100
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatiron/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatiron/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::ActsController#index as */*
+  [1m[36mUser Load (17.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4
+  [1m[36mAct Load (14.6ms)[0m  [1m[34mSELECT "acts".* FROM "acts"[0m
+  ↳ app/controllers/api/v1/acts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.48ms)
+Completed 200 OK in 151ms (Views: 98.3ms | ActiveRecord: 36.0ms)
+
+
+[active_model_serializers]   [1m[36mAct Load (1.8ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.5ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.6ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.6ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.5ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.6ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.5ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.2ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.3ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.3ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.4ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (122.33ms)
+Completed 200 OK in 291ms (Views: 212.7ms | ActiveRecord: 54.0ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mAct Load (1.6ms)[0m  [1m[34mSELECT "acts".* FROM "acts"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (9.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (2.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (2.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.6ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 34]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (2.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (1.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 31]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 33]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (2.6ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 37]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (4.2ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 32]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (1.9ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 38]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 35]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (1.0ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 36]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 39]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 40]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (1.0ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 41]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 42]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 43]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 44]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (2.1ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 45]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (2.3ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 46]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "acts" WHERE "acts"."id" = $1[0m  [["id", 47]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (11.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCategory Load (3.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.9ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.7ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Janine"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (10.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Janine"], ["created_at", "2019-04-05 12:08:25.592882"], ["updated_at", "2019-04-05 12:08:25.592882"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Tom"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tom"], ["created_at", "2019-04-05 12:08:25.611245"], ["updated_at", "2019-04-05 12:08:25.611245"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Animals"], ["created_at", "2019-04-05 12:08:25.617280"], ["updated_at", "2019-04-05 12:08:25.617280"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Environment"], ["created_at", "2019-04-05 12:08:25.621398"], ["updated_at", "2019-04-05 12:08:25.621398"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Family/Friends"], ["created_at", "2019-04-05 12:08:25.625247"], ["updated_at", "2019-04-05 12:08:25.625247"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Charity"], ["created_at", "2019-04-05 12:08:25.629604"], ["updated_at", "2019-04-05 12:08:25.629604"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "At Work"], ["created_at", "2019-04-05 12:08:25.634135"], ["updated_at", "2019-04-05 12:08:25.634135"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:59
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:59
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:59

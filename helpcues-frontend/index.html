@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script defer type="text/javascript" src="src/index.js" charset="utf-8"></script>
+    <title>Helpcues</title>
+  </head>
+  <body>
+
+    <div class="login-signup">
+
+      <div class="btn column sign-up-button">• Sign Up •</div>
+      <div class="btn column login-button">• Login •</div>
+
+      <div class="nav_forms_wrapper">
+        <!-- sign up form -->
+        <div class="signup">
+          <form id="signup-form" class="signup-form">
+            <input class="signup-input" id="signup-input" type="text" placeholder="Username"/>
+            <input type="submit" value="Sign Up"/>
+          </form>
+        </div>
+        <!-- sign up form -->
+
+        <!-- login form -->
+        <div class="login">
+          <form id="login-form" class="login-form">
+            <select class="login-select-user" id="login-select-user">
+              <option value="" disabled selected>Select User</option>
+            </select>
+            <input type="submit" value="Login"/>
+          </form>
+        </div>
+        <!-- login form -->
+
+        <h4><strong class="welcome-message"></strong></h4>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="logo-wrapper">
+        <img class="logo-img" src="logo.png" alt="Helpcues"/>
+      </div>
+
+
+      <!-- Left Column -->
+      <div class="column category-container">
+        <div class="category_wrapper">
+          <h4><strong class="select-category" style="font-size: 14px;">••• select category •••</strong></h4>
+          <button class="btn from-left" data-id="6" id="all-categories"> ○ All</button>
+          <button class="btn from-left" data-id="1" id="animals">♘ Animals</button>
+          <button class="btn from-left" data-id="2" id="environment">✿ Environment</button>
+          <button class="btn from-left" data-id="3" id="family-friends">♡ Family & Friends</button>
+          <button class="btn from-left" data-id="4" id="charity">✙ Charity</button>
+          <button class="btn from-left" data-id="5" id="work">✎ At Work</button>
+        </div>
+
+        <h4>
+          <div class="btn from-left generate-button" style="color:#40e0d0; font-size: 14px; font-decoration:bold;">••• Generate >></div>
+        </h4>
+      <!-- add new act -->
+        <div class="btn from-left collapsible select-category" style="color:#79e9de;">+ Create New Act + </div>
+        <div class="new-act-collapsible">
+          <form id="new-act-form">
+              <input class="new-act-input" id="new-act-input" type="text" placeholder="Create New Act"/>
+              <select id="new-act-cat">
+                  <option value="" disabled selected>Select Category</option>
+                  <option value="1">Animals</option>
+                  <option value="2">Environment</option>
+                  <option value="3">Friends/Family</option>
+                  <option value="4">Charity</option>
+                  <option value="5">Work</option>
+              </select>
+              <input type="submit" value="Create"/>
+            </form>
+        </div>
+        <!-- add new act -->
+
+      </div>
+      <!-- Left Column -->
+
+      <!-- Right Column -->
+      <div class="column act_wrapper">
+        <div data-id="" class="act-container">
+
+          <img height=400px class="act-img" id="act-img" src="">
+          <p class="act-text" id="act-text"></p>
+          <div style="display: none;" class="done-button btn" data-id="">Done  ✔</div>
+        </div>
+        <div class="done-count-container">
+          <p id="done-streak"></p>
+        </div>
+        <!-- Right Column -->
+
+      </div>
+
+
+    </div>
+  </body>
+</html>
