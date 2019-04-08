@@ -1,4 +1,4 @@
-Helpcues is a single-page random acts of kindness generator.
+<h1>Helpcues is a random acts of kindness generator.</h1>
 
 It works on a Ruby on Rails API and a vanilla Javascript front-end. To get the page up and running, navigate to the "helpcues-backend" folder and execute the following in the terminal:
 
