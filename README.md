@@ -10,14 +10,14 @@ Next, go to helpcues-frontend and open index.html in your browser of choice.
 
 The app does not require user authentication. You can login as one of the existing users or sign up a new user as follows: 
 
-<iframe src="https://giphy.com/embed/gFnSujRHaPzfZMKwLf" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/gFnSujRHaPzfZMKwLf">via GIPHY</a></p>
+<img src="https://media.giphy.com/media/gFnSujRHaPzfZMKwLf/giphy.gif" width="750" height="500" frameBorder="0" class="giphy-embed" allowFullScreen>
 
 The app allows users to filter acts according to category, and generates random acts based on the categories selected. Users can click "Done to mark that they have completed an act. This adds to the act's total "Done" count, as well as the users personal one.
 
-<iframe src="https://giphy.com/embed/H3wvjzmk8569NxNkzi" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/H3wvjzmk8569NxNkzi">via GIPHY</a></p>
+<img src="https://media.giphy.com/media/H3wvjzmk8569NxNkzi/giphy.gif" width="750" height="500" frameBorder="0" class="giphy-embed" allowFullScreen>
 
 Users can also create their own acts of kindness using the app. This will save to the database with its own gif, which is taken from the Giphy API based on the user's description:
 
-<iframe src="https://giphy.com/embed/H3wvjzmk8569NxNkzi" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/H3wvjzmk8569NxNkzi">via GIPHY</a></p>
+<img src="https://media.giphy.com/media/TF5cduuPdxeA4LM5uo/giphy.gif" width="750" height="500" frameBorder="0" class="giphy-embed" allowFullScreen>
 
 Have fun and remember to be kind!
