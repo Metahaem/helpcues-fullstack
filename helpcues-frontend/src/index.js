@@ -4,7 +4,7 @@ const userDoneURL = "http://localhost:3000/api/v1/user-done"
 const allButton = document.querySelector("#all-categories")
 const animalsButton = document.querySelector("#animals")
 const environmentButton = document.querySelector("#environment")
-const familyButton = document.querySelector("#family-friends")
+const familyButton = document.querySelector("#family")
 const charityButton = document.querySelector("#charity")
 const workButton = document.querySelector("#work")
 const actImageEl = document.querySelector('#act-img')
@@ -35,6 +35,14 @@ let state = {
   currentUser: 2,
   selectedCategories: new Set([]),
   newGif: ""
+}
+
+const categories = {
+  animals: null,
+  environment: null,
+  family: null,
+  charity: null,
+  work: null,
 }
 
 //----------------Event Listeners-----------------------------
@@ -68,7 +76,22 @@ function fetchUsersFromAPI() {
   .then(res => state.users = res)
 }
 
+function categoriesToState(categoriesReturn) {
+  categories.animals = categoriesReturn.filter(cat => cat.name === "Animals")[0].id
+  categories.environment = categoriesReturn.filter(cat => cat.name === "Environment")[0].id
+  categories.family = categoriesReturn.filter(cat => cat.name === "Family/Friends")[0].id
+  categories.charity = categoriesReturn.filter(cat => cat.name === "Charity")[0].id
+  categories.work = categoriesReturn.filter(cat => cat.name === "At Work")[0].id
+}
+
+function fetchCategoriesFromAPI() {
+  return fetch('http://localhost:3000/api/v1/categories')
+  .then(res => res.json())
+  .then(res => categoriesToState(res))
+}
+
 function init() {
+  fetchCategoriesFromAPI()
   fetchActsFromAPI()
   fetchUsersFromAPI()
   .then(() => populateLoginForm())
@@ -78,16 +101,16 @@ function init() {
 
 function onCatButton(event) {
   event.preventDefault()
-  const catId = parseInt(event.target.dataset.id)
+  const catID = categories[event.target.id]
   allButton.classList.remove('focus')
   event.target.classList.toggle('focus')
   if (event.target.class === "active") {
     event.target.class = ""
-    state.selectedCategories.delete(catId)
+    state.selectedCategories.delete(catID)
   }
   else {
     event.target.class = "active"
-    state.selectedCategories.add(catId)
+    state.selectedCategories.add(catID)
   }
 }
 
@@ -103,9 +126,10 @@ function onAllButton(event) {
   if (!event.target.classList.contains('focus')) {
     removeFocus()
     event.target.classList.add('focus')
-      state.selectedCategories = new Set([1,2,3,4,5])
+      state.selectedCategories = new Set(Object.values(categories))
       allButton.class = "active"
       arrayOfCategories.forEach(category => category.class = "active")
+    // }
   }  else {
     removeFocus()
     allButton.class = ""
@@ -199,6 +223,7 @@ function getRandomIndex(actArray) {
 //returns random index within
 
 function randomActFromSelectedCategoryIDs() {
+  debugger
   const actArray = state.acts.filter(act => state.selectedCategories.has(act.category_id))
   const actIndex = getRandomIndex(actArray)
   return actArray[actIndex]
@@ -271,7 +296,7 @@ function onNewActSubmit(event) {
   let userID
 
   if (state.currentUser === 2) {
-    userID = 2
+    userID = state.users[0].id
   }
   else {
     userID = state.currentUser.id
@@ -279,8 +304,9 @@ function onNewActSubmit(event) {
 
   if (newActInput.value.length > 0 && newActCat.value.length > 0) {
       const content = newActInput.value
-      const catID = parseInt(newActCat.value)
+      const catID = categories[newActCat.value]
       let newAct;
+      debugger
       searchGifs(content).then(() => {
         return newAct = {content: content, user_id: userID, category_id: catID, image_url: state.newGif}
         }).then((res) => saveNewActToAPI(res))
