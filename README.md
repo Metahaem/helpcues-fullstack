@@ -6,7 +6,7 @@ It works on a Ruby on Rails API and a vanilla Javascript front-end. To get the p
 
 This should create the API, seed it with data and start the rails server running.
 
-Next, go to helpcues-frontend and open index.html in your browser of choice. 
+Next, go to helpcues-frontend and open "index.html" in your browser of choice. 
 
 The app does not require user authentication. You can login as one of the existing users or sign up a new user as follows: 
 
