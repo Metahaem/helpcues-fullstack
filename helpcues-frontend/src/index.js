@@ -223,7 +223,6 @@ function getRandomIndex(actArray) {
 //returns random index within
 
 function randomActFromSelectedCategoryIDs() {
-  debugger
   const actArray = state.acts.filter(act => state.selectedCategories.has(act.category_id))
   const actIndex = getRandomIndex(actArray)
   return actArray[actIndex]
@@ -306,7 +305,6 @@ function onNewActSubmit(event) {
       const content = newActInput.value
       const catID = categories[newActCat.value]
       let newAct;
-      debugger
       searchGifs(content).then(() => {
         return newAct = {content: content, user_id: userID, category_id: catID, image_url: state.newGif}
         }).then((res) => saveNewActToAPI(res))

@@ -2266,3 +2266,135 @@ Processing by Api::V1::ActsController#increase_done_count as JSON
 Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/api/v1/acts" for 127.0.0.1 at 2019-04-08 13:19:22 +0100
+Started GET "/api/v1/users" for 127.0.0.1 at 2019-04-08 13:19:22 +0100
+Started GET "/api/v1/categories" for 127.0.0.1 at 2019-04-08 13:19:22 +0100
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatiron/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/flatiron/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/flatiron/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ActsController#index as */*
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::CategoriesController#index as */*
+  [1m[36mCategory Load (4.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/categories_controller.rb:4
+  ↳ app/controllers/api/v1/users_controller.rb:4
+  [1m[36mAct Load (7.7ms)[0m  [1m[34mSELECT "acts".* FROM "acts"[0m
+  ↳ app/controllers/api/v1/acts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.38ms)
+Completed 200 OK in 154ms (Views: 51.1ms | ActiveRecord: 68.9ms)
+
+
+[active_model_serializers]   [1m[36mAct Load (5.0ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (1.3ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 31]]
+[active_model_serializers]   [1m[36mAct Load (0.5ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (10.3ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (1.1ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 32]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (457.98ms)
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+Completed 200 OK in 580ms (Views: 472.2ms | ActiveRecord: 79.3ms)
+
+
+[active_model_serializers]   [1m[36mAct Load (0.5ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.5ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.4ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 35]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (428.14ms)
+Completed 200 OK in 665ms (Views: 500.5ms | ActiveRecord: 133.7ms)
+
+
+Started GET "/api/v1/categories" for 127.0.0.1 at 2019-04-08 13:19:43 +0100
+Started GET "/api/v1/acts" for 127.0.0.1 at 2019-04-08 13:19:43 +0100
+Started GET "/api/v1/users" for 127.0.0.1 at 2019-04-08 13:19:43 +0100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatiron/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#index as */*
+  [1m[35m (22.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatiron/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (24.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatiron/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::CategoriesController#index as */*
+Processing by Api::V1::ActsController#index as */*
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/categories_controller.rb:4
+  ↳ app/controllers/api/v1/users_controller.rb:4
+  [1m[36mAct Load (2.1ms)[0m  [1m[34mSELECT "acts".* FROM "acts"[0m
+  ↳ app/controllers/api/v1/acts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.47ms)
+Completed 200 OK in 39ms (Views: 22.6ms | ActiveRecord: 9.6ms)
+
+
+[active_model_serializers]   [1m[36mAct Load (1.2ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 31]]
+[active_model_serializers]   [1m[36mAct Load (1.3ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.4ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.5ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (2.2ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.7ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (30.93ms)
+Completed 200 OK in 114ms (Views: 49.6ms | ActiveRecord: 48.4ms)
+
+
+[active_model_serializers]   [1m[36mAct Load (6.8ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.6ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 35]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (52.29ms)
+Completed 200 OK in 109ms (Views: 58.2ms | ActiveRecord: 43.8ms)
+
+
+Started GET "/api/v1/categories" for 127.0.0.1 at 2019-04-08 13:20:16 +0100
+Processing by Api::V1::CategoriesController#index as */*
+Started GET "/api/v1/acts" for 127.0.0.1 at 2019-04-08 13:20:16 +0100
+  [1m[36mCategory Load (3.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/api/v1/categories_controller.rb:4
+Started GET "/api/v1/users" for 127.0.0.1 at 2019-04-08 13:20:16 +0100
+Processing by Api::V1::ActsController#index as */*
+Processing by Api::V1::UsersController#index as */*
+[active_model_serializers]   [1m[36mAct Load (16.9ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4
+  [1m[36mAct Load (13.5ms)[0m  [1m[34mSELECT "acts".* FROM "acts"[0m
+  ↳ app/controllers/api/v1/acts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.07ms)
+Completed 200 OK in 36ms (Views: 21.9ms | ActiveRecord: 13.5ms)
+
+
+[active_model_serializers]   [1m[36mAct Load (25.1ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (4.8ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.7ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.3ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."category_id" = $1[0m  [["category_id", 35]]
+[active_model_serializers]   ↳ app/controllers/api/v1/categories_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (78.22ms)
+Completed 200 OK in 86ms (Views: 34.0ms | ActiveRecord: 51.5ms)
+
+
+[active_model_serializers]   [1m[36mAct Load (12.6ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (1.4ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mAct Load (0.7ms)[0m  [1m[34mSELECT "acts".* FROM "acts" WHERE "acts"."user_id" = $1[0m  [["user_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (47.99ms)
+Completed 200 OK in 89ms (Views: 30.6ms | ActiveRecord: 57.6ms)
+
+
