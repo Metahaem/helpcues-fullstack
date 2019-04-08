@@ -1,6 +1,6 @@
 Helpcues is a single-page random acts of kindness generator.
 
-It works on a Ruby on Rails API and a vanilla Javascript front-end. To get the page up and running, navigate to the helpcues-backend folder and execute the following:
+It works on a Ruby on Rails API and a vanilla Javascript front-end. To get the page up and running, navigate to the "helpcues-backend" folder and execute the following in the terminal:
 
 `rails db:create && rails db:migrate && rails db:seed && rails s`
 
